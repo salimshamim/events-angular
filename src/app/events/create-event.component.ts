@@ -15,13 +15,16 @@ import {Router} from '@angular/router';
 })
 
 export class CreateEventComponent{
-
+    isDirty: Boolean
     constructor(private router: Router){
 
     }
 
     handleCancel(){
+        this.isDirty = true;
         this.router.navigate(['/events']);
     }
+
+
 
 }
